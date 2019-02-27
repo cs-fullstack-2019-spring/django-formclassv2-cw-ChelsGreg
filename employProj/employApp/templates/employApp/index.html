@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<!--HEADER-->
+<h1>EMPLOYEE APPLICATION</h1>
+
+<!--FORM FOR APPLICATION THAT ROUTES TO INFO PAGE-->
+<form action="{% url 'employInfo' %}" method="post">
+    {% csrf_token %}
+    <!--SHOWS OBJECTS FROM CREATED FORM-->
+    {{ employForm }}
+    <button>Sumbit</button>
+</form>
+
+</body>
+</html>
